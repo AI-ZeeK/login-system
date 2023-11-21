@@ -89,7 +89,6 @@ const Auth = (props: Props) => {
             action="
           "
             onSubmit={handleAuthValidate}
-          
             className="flex flex-col gap-4 w-full justify-center items-center"
           >
             <section className="grid sm:grid-cols-2 gap-4 w-full">
@@ -194,12 +193,6 @@ const Auth = (props: Props) => {
                       type: "tween",
                     },
                   }}
-                  transition={{
-                    delay: 0.25,
-                    ease: "easeOut",
-                    duration: 0.5,
-                    type: "spring",
-                  }}
                   className="hover:underline transition-all duration-300 flex gap-2 text-xs cursor-pointer"
                 >
                   <span>Don't have an account?</span>
@@ -217,12 +210,6 @@ const Auth = (props: Props) => {
                       duration: 0.5,
                       type: "tween",
                     },
-                  }}
-                  transition={{
-                    delay: 0.25,
-                    ease: "easeOut",
-                    duration: 0.5,
-                    type: "spring",
                   }}
                   className="hover:underline flex gap-2 text-xs cursor-pointer"
                 >
