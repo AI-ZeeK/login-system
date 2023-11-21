@@ -89,12 +89,7 @@ const Auth = (props: Props) => {
             action="
           "
             onSubmit={handleAuthValidate}
-            transition={{
-              delay: 0.25,
-              ease: "easeOut",
-              duration: 0.5,
-              type: "spring",
-            }}
+          
             className="flex flex-col gap-4 w-full justify-center items-center"
           >
             <section className="grid sm:grid-cols-2 gap-4 w-full">
