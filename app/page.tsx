@@ -14,20 +14,19 @@ export default async function Index() {
   const supabase = createClientComponentClient();
 
   useEffect(() => {
-    async function getUser() {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-      dispatch(setUser(user));
-      console.log(user, 789);
-    }
+    // async function getUser() {
+    //   const {
+    //     data: { user },
+    //   } = await supabase.auth.getUser();
+    //   dispatch(setUser(user));
+    //   console.log(user, 789);
+    // }
     if (!user) {
       router.push("/login");
     }
-    getUser();
+    // getUser();
   }, []);
 
-  console.log(user, user, 789);
   return (
     <PageWrapper modeKey="home">
       <Header />
