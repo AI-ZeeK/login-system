@@ -42,12 +42,6 @@ const TextInput = ({
             type: "tween",
           },
         }}
-        transition={{
-          delay: 0.25,
-          ease: "easeOut",
-          duration: 0.5,
-          type: "spring",
-        }}
         className="flex flex-col text-xs gap-2 w-full"
       >
         {password ? (
