@@ -74,12 +74,6 @@ const UpdatePassword = (props: Props) => {
             action="
           "
             onSubmit={handleResetPassword}
-            transition={{
-              delay: 0.25,
-              ease: "easeOut",
-              duration: 0.5,
-              type: "spring",
-            }}
             className="flex flex-col gap-4 w-full justify-center items-center"
           >
             <section className="grid gap-4 w-full">

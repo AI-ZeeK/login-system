@@ -59,7 +59,7 @@ export const canInitSupabaseClient = () => {
 
 export const signOut = async () => {
   console.log(1);
-  const cookieStore = cookies();
+  // const cookieStore = cookies();
   console.log(2);
   const supabase = createClient(cookieStore);
   console.log(3);
