@@ -10,17 +10,17 @@ export default async function Index() {
   const { user } = useAppSelector((state) => state.AppReducer);
   const dispatch = useAppDispatch();
 
-  useEffect(() => {
-    // const {
-    //   data: { user },
-    // } = await supabase.auth.getUser();
-    // dispatch(setUser(user));
-    console.log(user, user, 789);
-    if (!user) {
-      router.push("/");
-    }
-  }, []);
+  // useEffect(() => {
+  //   // const {
+  //   //   data: { user },
+  //   // } = await supabase.auth.getUser();
+  //   // dispatch(setUser(user));
+  //   if (!user) {
+  //     router.push("/");
+  //   }*
+  // }, []);
 
+  console.log(user, user, 789);
   return (
     <PageWrapper modeKey="home">
       <Header />
