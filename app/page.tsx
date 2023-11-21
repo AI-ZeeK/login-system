@@ -4,21 +4,28 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Header from "@/components/Header";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { setUser } from "@/redux/features/AppSlice";
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 
 export default async function Index() {
   const router = useRouter();
   const { user } = useAppSelector((state) => state.AppReducer);
   const dispatch = useAppDispatch();
+  const supabase = createClientComponentClient();
 
-  // useEffect(() => {
-  //   // const {
-  //   //   data: { user },
-  //   // } = await supabase.auth.getUser();
-  //   // dispatch(setUser(user));
-  //   if (!user) {
-  //     router.push("/");
-  //   }*
-  // }, []);
+  useEffect(() => {
+    async function getUser() {
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      dispatch(setUser(user));
+      console.log(user, 789);
+    }
+    if (!user) {
+      router.push("/login");
+    }
+    getUser();
+  }, []);
 
   console.log(user, user, 789);
   return (
